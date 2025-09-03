@@ -1,0 +1,13 @@
+{
+  "name": "pjn-auto",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@playwright/test": "^1.46.0",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5"
+  },
+  "scripts": {
+    "run": "node scraper.js"
+  }
+}

@@ -2,12 +2,12 @@ import { chromium } from '@playwright/test';
 import fetch from 'node-fetch';
 
 const {
-  PJN_USER,
-  PJN_PASS,
-  SHEET_ENDPOINT,   // tu URL de Apps Script que termina en /exec
-  SHEET_TOKEN,      // el mismo API_TOKEN que cargaste en Apps Script
-  EXPEDIENTES,      // lista separada por comas: 22583/14,22853/14
-  SHEET_TAB_NAME    // nombre exacto de la Hoja: CONTROL DE JUICIOS DETALLADO (05MAR24)
+  20288846619,
+  tincho03,
+  https://script.google.com/macros/s/AKfycbxuajlu86JqzOnQlLUJKwt4vWgYFgRhNZrhmMvG1DpZU6dGtyLruVuy-i9-ek0F29d_/exec,   // tu URL de Apps Script que termina en /exec
+  MARTIN-CTRL-JUICIOS-SEGURA,      // el mismo API_TOKEN que cargaste en Apps Script
+  22583,      // lista separada por comas: 22583/14,22853/14
+  CONTROL DE JUICIOS DETALLADO (05MAR24)    // nombre exacto de la Hoja: CONTROL DE JUICIOS DETALLADO (05MAR24)
 } = process.env;
 
 function delay(ms){ return new Promise(r => setTimeout(r, ms)); }

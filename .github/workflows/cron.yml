@@ -1,0 +1,24 @@
+name: PJN auto updater
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'   # corre cada 3 horas
+  workflow_dispatch:        # permite correrlo manualmente desde GitHub
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm i
+      - run: npm run run
+        env:
+          PJN_USER: ${{ secrets.PJN_USER }}
+          PJN_PASS: ${{ secrets.PJN_PASS }}
+          SHEET_ENDPOINT: ${{ secrets.SHEET_ENDPOINT }}
+          SHEET_TOKEN: ${{ secrets.SHEET_TOKEN }}
+          EXPEDIENTES: ${{ secrets.EXPEDIENTES }}
+          SHEET_TAB_NAME: ${{ secrets.SHEET_TAB_NAME }}
